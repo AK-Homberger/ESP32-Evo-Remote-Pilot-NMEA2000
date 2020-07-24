@@ -14,9 +14,9 @@ Thats's all what is required to controle an EV-1 based Auto Pilot with a simple 
 
 The code is based on the NMEA 2000 / NMEA0183 libraries from Timo Lappalainen (https://github.com/ttlappalainen). Download and install the libraries from GitHub link above:
 
-    NMEA2000
-    NMEA2000_esp32
-    NMEA0183
+ - NMEA2000
+ - NMEA2000_esp32
+ - NMEA0183
 
 The Remote Control is using the RCswitch library (to be installed with the Arduiono IDE Library Manager).
 
@@ -27,4 +27,4 @@ The 12 Volt is reduced to 5 Volt with a DC Step-Down_Converter (D24V10F5, https:
 GPIO15 is used for the data receiver from the RXB6 receiver.
 For programming the KeyFob. please have a look to the Arduino/Seatalk version of the Remote Control (code will be added soon for ESP32).
 
-Version 0.1, 24.07.2020: Initial version.
+- Version 0.1, 24.07.2020: Initial version.

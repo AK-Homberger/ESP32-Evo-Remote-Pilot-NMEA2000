@@ -27,4 +27,5 @@ The 12 Volt is reduced to 5 Volt with a DC Step-Down_Converter (D24V10F5, https:
 GPIO15 is used for the data receiver from the RXB6 receiver.
 For programming the KeyFob. please have a look to the Arduino/Seatalk version of the Remote Control (code will be added soon for ESP32).
 
-- Version 0.1, 24.07.2020: Initial version.
+
+Version 0.1, 24.07.2020: Initial version.

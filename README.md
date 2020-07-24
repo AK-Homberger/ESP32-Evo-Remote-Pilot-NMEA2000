@@ -1,7 +1,7 @@
 # ESP32-Evo-Remote-Pilot-NMEA2000
 This is a Remote Control for EVO-1 Auto Pilot via NMEA2000.
 
-This is an early stage development for EVO-1 Remot Controle with a 433MHz Sender (Key Fob).
+This is an early stage development for EVO-1 Remot Control with a 433MHz Sender (Key Fob).
 
 It is based on the work of this project in GitHub: https://github.com/matztam/raymarine-evo-pilot-remote.
 Many thaks for all the work to identify the NMEA 2000 codes for the EV-1 Course Computer.

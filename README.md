@@ -4,7 +4,7 @@ This is a Remote Control for EV-1 Auto Pilot via NMEA2000.
 It is based on the work of this project in GitHub: https://github.com/matztam/raymarine-evo-pilot-remote.
 Many thaks for all the work to identify the NMEA 2000 codes for the EV-1 Course Computer.
 
-The hardware consists of an ESP32 NodeMCU (here from AZ-Delivery). A CAN bus transceiver and a power converter.
+The hardware consists of an ESP32 NodeMCU (here from AZ-Delivery), a CAN bus transceiver, a 433MHz receiver (RXB6) and a power converter.
 Thats's all what is required to control an EV-1 based Auto Pilot with a simple 433 MHz remote control.
 
 ![KeyFob](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/KeyFob.jpg)

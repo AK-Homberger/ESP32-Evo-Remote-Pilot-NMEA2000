@@ -1,5 +1,5 @@
 # ESP32-Evo-Remote-Pilot-NMEA2000
-This is a Remote Control for EVO-1 Auto Pilot via NMEA2000.
+This is a Remote Control for EV-1 Auto Pilot via NMEA2000.
 
 It is based on the work of this project in GitHub: https://github.com/matztam/raymarine-evo-pilot-remote.
 Many thaks for all the work to identify the NMEA 2000 codes for the EV-1 Course Computer.

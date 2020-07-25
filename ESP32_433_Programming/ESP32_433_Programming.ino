@@ -1,8 +1,8 @@
 /*
   Code to program 433 MHz KeyFob
 
-  Transmitter must be connected to ESP32 Pin #15
-  Receiver must be connected to ESP32 Pin #19
+  Transmitter must be connected to ESP32 Pin #19
+  Receiver must be connected to ESP32 Pin #15
 
 */
 

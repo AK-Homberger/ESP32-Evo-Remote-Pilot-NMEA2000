@@ -25,6 +25,8 @@ The 12 Volt is reduced to 5 Volt with a DC Step Down Converter (D24V10F5, https:
 
 GPIO 15 is used for the data receiver from the RXB6 receiver.
 
+A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -10 degrees) course changes to the autopilot (Auto/Standbay is optional and requires two more button).
+
 For programming the KeyFob please use the sketch ESP_433_Programming.ino (https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/tree/master/ESP32_433_Programming). The Transmitter has to be connected to GPIO 19.
 
 

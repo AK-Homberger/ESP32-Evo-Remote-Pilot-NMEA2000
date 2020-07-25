@@ -14,7 +14,7 @@ Thats's all what is required to control an EV-1 based Auto Pilot with a simple 4
 ![Schematics](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotSchematics.png)
 
 
-The code is using the NMEA 2000 / NMEA0183 libraries from Timo Lappalainen (https://github.com/ttlappalainen). 
+The code is using the NMEA 2000 libraries from Timo Lappalainen (https://github.com/ttlappalainen). 
 Download and install the libraries from GitHub link above:
 
  - NMEA2000

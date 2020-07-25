@@ -101,7 +101,6 @@ void setup() {
     pilotSourceAddress = getDeviceSourceAddress("EV-1");
   }
 
-  pilotSourceAddress = 0;
   Serial.println((String) "Found EV-1 Pilot: " + pilotSourceAddress);
 }
 

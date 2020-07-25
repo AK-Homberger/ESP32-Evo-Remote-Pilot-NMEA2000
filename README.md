@@ -19,8 +19,7 @@ Download and install the libraries from GitHub link above:
 
  - NMEA2000
  - NMEA2000_esp32
- - NMEA0183
-
+ 
 The Remote Control is using the RCswitch library (to be installed with the Arduiono IDE Library Manager).
 
 For the ESP32 CAN bus, I use the "Waveshare SN65HVD230 Can Board" as transceiver. It works well with the ESP32. 

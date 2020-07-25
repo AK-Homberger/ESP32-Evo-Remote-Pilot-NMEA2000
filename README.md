@@ -31,4 +31,4 @@ GPIO 15 is used for the data receiver from the RXB6 receiver.
 For programming the KeyFob please use the sketch ESP_433_Programming.ino (https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/tree/master/ESP32_433_Programming). The Transmitter has to be connected to GPIO 19.
 
 
-Version 0.1, 24.07.2020: Initial version.
+Version 0.1, 24.07.2020: Initial version. 

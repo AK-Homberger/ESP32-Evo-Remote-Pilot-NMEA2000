@@ -24,8 +24,9 @@ The Remote Control is using the RCswitch library (to be installed with the Ardui
 For the ESP32 CAN bus, I use the "Waveshare SN65HVD230 Can Board" as transceiver. It works well with the ESP32. 
 The 12 Volt is reduced to 5 Volt with a DC Step Down Converter (D24V10F5, https://www.pololu.com/product/2831).
 
-GPIO15 is used for the data receiver from the RXB6 receiver.
-For programming the KeyFob. please have a look to the Arduino/Seatalk version of the Remote Control (code will be added soon for ESP32).
+GPIO 15 is used for the data receiver from the RXB6 receiver.
+
+For programming the KeyFob please use the sketch ESP_433_Programming.ino (https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/tree/master/ESP32_433_Programming). The Transmitter has to be connected to GPIO 19.
 
 
 Version 0.1, 24.07.2020: Initial version.

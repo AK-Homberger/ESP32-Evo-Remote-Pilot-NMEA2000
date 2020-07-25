@@ -23,7 +23,7 @@ The Remote Control is using the RCswitch library (to be installed with the Ardui
 For the ESP32 CAN bus, I use the "Waveshare SN65HVD230 Can Board" as transceiver. It works well with the ESP32. 
 The 12 Volt is reduced to 5 Volt with a DC Step Down Converter (D24V10F5, https://www.pololu.com/product/2831).
 
-GPIO 15 is used for the data receiver from the RXB6 receiver.
+GPIO 15 is used for the data from the RXB6 receiver.
 
 A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -10 degrees) course changes to the autopilot (Auto/Standby is optional and requires two more buttons or an additional KeyFob).
 

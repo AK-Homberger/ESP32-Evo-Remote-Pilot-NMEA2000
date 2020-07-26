@@ -16,12 +16,10 @@
 //   - Reads 433 MHz commands via RXB6 receiver
 //   - Sends NMEA2000 messages to EV-1 Course Computer
 
-// Version 0.1, 24.07.2020, AK-Homberger
+// Version 0.2, 26.07.2020, AK-Homberger
 
 #define ESP32_CAN_TX_PIN GPIO_NUM_2  // Set CAN TX port to 2 
 #define ESP32_CAN_RX_PIN GPIO_NUM_4  // Set CAN RX port to 4
-
-#define ESP32_RCSWITCH_PIN GPIO_NUM_15  // Set RCSWITCH port to 15 (RXB6 receiver)
 
 #include <Arduino.h>
 #include <N2kMsg.h>
@@ -32,7 +30,20 @@
 #include "RaymarinePilot.h"
 #include "N2kDeviceList.h"
 
+#define ESP32_RCSWITCH_PIN GPIO_NUM_15  // Set RCSWITCH port to 15 (RXB6 receiver)
+#define KEY_DELAY 300  // 300 ms break between keys
+#define BEEP_TIME 200 // 200 ms beep time
+
+
+// See Canboat project for types (LOOKUP_SEATALK_ALARM_ID / LOOKUP_SEATALK_ALARM_GROUP): https://github.com/canboat/canboat/blob/master/analyzer/pgn.h
+#define ALARM_TYPE 1  // Shallow depth alarm
+#define ALARM_GROUP 0 // Instrument group
+
 RCSwitch mySwitch = RCSwitch();
+
+unsigned long key_time = 0;
+unsigned long beep_time = 0;
+bool beep_status = false;
 
 const unsigned long Key_Minus_1 = 1111001; // Change values to individual values programmed to remote control
 const unsigned long Key_Plus_1 = 1111002;
@@ -105,70 +116,26 @@ void setup() {
 }
 
 
-void loop() {
-  int i;
-  unsigned long key;
+void BeepOn() {
+  tN2kMsg N2kMsg;
 
-  if (mySwitch.available()) {
+  if (beep_status == true) return;  // Already On
 
-    key = mySwitch.getReceivedValue();
+  RaymarinePilot::SetN2kAlarmState(N2kMsg, 255, 1, ALARM_TYPE, ALARM_GROUP); // Alarm on
+  NMEA2000.SendMsg(N2kMsg);
+  beep_time = millis();
+  beep_status = true;
+}
 
-    if (key == Key_Standby) {
-      Serial.println("Setting PILOT_MODE_STANDBY");
 
-      tN2kMsg N2kMsg;
-      RaymarinePilot::SetEvoPilotMode(N2kMsg, pilotSourceAddress, PILOT_MODE_STANDBY);
-      NMEA2000.SendMsg(N2kMsg);
-    }
+void BeepOff() {
+  tN2kMsg N2kMsg;
 
-    else if (key == Key_Auto) {
-      Serial.println("Setting PILOT_MODE_AUTO");
-
-      tN2kMsg N2kMsg;
-      RaymarinePilot::SetEvoPilotMode(N2kMsg, pilotSourceAddress, PILOT_MODE_AUTO);
-      NMEA2000.SendMsg(N2kMsg);
-    }
-
-    else if (key == Key_Plus_1) {
-      Serial.println("Plus 1");
-
-      tN2kMsg N2kMsg;
-      RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_PLUS_1);
-      NMEA2000.SendMsg(N2kMsg);
-    }
-
-    else if (key == Key_Plus_10) {
-      Serial.println("Plus 10");
-
-      tN2kMsg N2kMsg;
-      RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_PLUS_10);
-      NMEA2000.SendMsg(N2kMsg);
-    }
-
-    else if (key == Key_Minus_1) {
-      Serial.println("Minus 1");
-
-      tN2kMsg N2kMsg;
-      RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_MINUS_1);
-      NMEA2000.SendMsg(N2kMsg);
-    }
-
-    else if (key == Key_Minus_10) {
-      Serial.println("Minus 10");
-
-      tN2kMsg N2kMsg;
-      RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_MINUS_10);
-      NMEA2000.SendMsg(N2kMsg);
-    }
-
-    i = 0;
-    while (mySwitch.available() && i < 2) {
-      mySwitch.resetAvailable();
-      delay (150);
-      i++;
-    }
+  if (beep_status == true && millis() > beep_time + BEEP_TIME) {
+    RaymarinePilot::SetN2kAlarmState(N2kMsg, 255, 0, ALARM_TYPE, ALARM_GROUP); // Alarm off
+    NMEA2000.SendMsg(N2kMsg);
+    beep_status = false;
   }
-  NMEA2000.ParseMessages();
 }
 
 
@@ -186,4 +153,76 @@ int getDeviceSourceAddress(String model) {
     }
   }
   return -2;
+}
+
+
+
+void loop() {
+  int i;
+  unsigned long key;
+
+  if ( millis() < key_time + KEY_DELAY) mySwitch.resetAvailable(); // Break between keys
+
+  if (mySwitch.available()) {
+
+    key = mySwitch.getReceivedValue();
+    key_time = millis();   // Remember time of last key received
+
+    if (key == Key_Standby) {
+      Serial.println("Setting PILOT_MODE_STANDBY");
+
+      tN2kMsg N2kMsg;
+      RaymarinePilot::SetEvoPilotMode(N2kMsg, pilotSourceAddress, PILOT_MODE_STANDBY);
+      NMEA2000.SendMsg(N2kMsg);
+      BeepOn();
+    }
+
+    else if (key == Key_Auto) {
+      Serial.println("Setting PILOT_MODE_AUTO");
+
+      tN2kMsg N2kMsg;
+      RaymarinePilot::SetEvoPilotMode(N2kMsg, pilotSourceAddress, PILOT_MODE_AUTO);
+      NMEA2000.SendMsg(N2kMsg);
+      BeepOn();
+    }
+
+    else if (key == Key_Plus_1) {
+      Serial.println("+1");
+
+      tN2kMsg N2kMsg;
+      RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_PLUS_1);
+      NMEA2000.SendMsg(N2kMsg);
+      BeepOn();
+    }
+
+    else if (key == Key_Plus_10) {
+      Serial.println("+10");
+
+      tN2kMsg N2kMsg;
+      RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_PLUS_10);
+      NMEA2000.SendMsg(N2kMsg);
+      BeepOn();
+    }
+
+    else if (key == Key_Minus_1) {
+      Serial.println("-1");
+
+      tN2kMsg N2kMsg;
+      RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_MINUS_1);
+      NMEA2000.SendMsg(N2kMsg);
+      BeepOn();
+    }
+
+    else if (key == Key_Minus_10) {
+      Serial.println("-10");
+
+      tN2kMsg N2kMsg;
+      RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_MINUS_10);
+      NMEA2000.SendMsg(N2kMsg);
+      BeepOn();
+    }
+
+  }
+  NMEA2000.ParseMessages();
+  BeepOff();
 }

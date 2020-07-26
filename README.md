@@ -31,6 +31,7 @@ GPIO 15 is used for the data from the RXB6 receiver. As antenna please use a sho
 For programming the KeyFob please use the sketch ESP32_433_Programming.ino (https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/tree/master/ESP32_433_Programming). The Transmitter has to be connected to GPIO 19.
 
 
+# Updates
 Version 0.2, 26.07.2020: Avoid using delay(), added SetN2kPGN65361 (Seatalk Alarm State) to allow alarm beep for key received feedback.
 
 Version 0.1, 24.07.2020: Initial version. 

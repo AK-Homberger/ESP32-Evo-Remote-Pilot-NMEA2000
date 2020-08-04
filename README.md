@@ -7,7 +7,7 @@ Many thanks for all the work to identify the NMEA 2000 codes for the EV-1 Course
 The hardware consists of an ESP32 NodeMCU (here from AZ-Delivery), a CAN bus transceiver, a 433MHz receiver (RXB6) and a power converter.
 Thats's all what is required to control an EV-1 based Auto Pilot with a simple 433 MHz remote control.
 
-A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -10 degrees) course changes to the autopilot (Auto/Standby is optional and requires two more buttons or an additional KeyFob). An accustical feedback for each received key is provided with a piezo buzzer tone.
+A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -10 degrees) course changes to the autopilot (Auto/Standby is optional and requires two more buttons or an additional KeyFob). An accustical feedback for each received key is provided with a piezo buzzer tone. I tried to use the alarm function of the MFD (as within the Seatalk remote control). But so far I was not successful to send any alarm PGN that generates an alarm on the MFD.
 
 ![KeyFob](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/KeyFob.jpg)
 
@@ -27,7 +27,7 @@ For the ESP32 CAN bus, I use the "Waveshare SN65HVD230 Can Board" as transceiver
 The 12 Volt is reduced to 5 Volt with a DC Step Down Converter (D24V10F5, https://www.pololu.com/product/2831).
 
 GPIO 15 is used for the data from the RXB6 receiver. As antenna please use a short wire (e.g. 17,3 cm).
-GPIO 2 is used to generate accustical feedback with a buzzer.
+GPIO 2 is used to generate accustical feedback with a piezo buzzer.
 
 For programming the KeyFob please use the sketch ESP32_433_Programming.ino (https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/tree/master/ESP32_433_Programming). The Transmitter has to be connected to GPIO 19.
 

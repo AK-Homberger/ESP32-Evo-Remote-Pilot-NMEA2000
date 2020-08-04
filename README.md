@@ -7,7 +7,7 @@ Many thanks for all the work to identify the NMEA 2000 codes for the EV-1 Course
 The hardware consists of an ESP32 NodeMCU (here from AZ-Delivery), a CAN bus transceiver, a 433MHz receiver (RXB6) and a power converter.
 Thats's all what is required to control an EV-1 based Auto Pilot with a simple 433 MHz remote control.
 
-A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -10 degrees) course changes to the autopilot (Auto/Standby is optional and requires two more buttons or an additional KeyFob). An accustical feedback for each received key is provided with a buzzer.
+A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -10 degrees) course changes to the autopilot (Auto/Standby is optional and requires two more buttons or an additional KeyFob). An accustical feedback for each received key is provided with a piezo buzzer tone.
 
 ![KeyFob](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/KeyFob.jpg)
 

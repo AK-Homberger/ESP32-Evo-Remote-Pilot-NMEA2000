@@ -37,10 +37,6 @@
 
 #define BUZZER_PIN 2  // Buzzer connected to GPIO 2
 
-// See Canboat project for types (LOOKUP_SEATALK_ALARM_ID / LOOKUP_SEATALK_ALARM_GROUP): https://github.com/canboat/canboat/blob/master/analyzer/pgn.h
-#define ALARM_TYPE 1  // Shallow depth alarm
-#define ALARM_GROUP 0 // Instrument group
-
 int NodeAddress;  // To store last Node Address
 
 Preferences preferences;             // Nonvolatile storage on ESP32 - To store LastDeviceAddress

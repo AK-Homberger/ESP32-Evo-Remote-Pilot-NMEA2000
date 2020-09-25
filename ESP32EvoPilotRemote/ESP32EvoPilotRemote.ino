@@ -16,7 +16,7 @@
 //   - Reads 433 MHz commands via RXB6 receiver
 //   - Sends NMEA2000 messages to EV-1 Course Computer
 
-// Version 0.4, 04.08.2020, AK-Homberger
+// Version 0.5, 25.09.2020, AK-Homberger
 
 #define ESP32_CAN_TX_PIN GPIO_NUM_5  // Set CAN TX port to 5 
 #define ESP32_CAN_RX_PIN GPIO_NUM_4  // Set CAN RX port to 4
@@ -109,7 +109,7 @@ void setup() {
   //NMEA2000.SetForwardOwnMessages();
 
   preferences.begin("nvs", false);                          // Open nonvolatile storage (nvs)
-  NodeAddress = preferences.getInt("LastNodeAddress", 34);  // Read stored last NodeAddress, default 34
+  NodeAddress = preferences.getInt("LastNodeAddress", 32);  // Read stored last NodeAddress, default 32
   preferences.end();
   Serial.printf("NodeAddress=%d\n", NodeAddress);
 
@@ -185,62 +185,56 @@ void Handle_AP_Remote(void) {
 
     if (key == Key_Standby) {
       Serial.println("Setting PILOT_MODE_STANDBY");
-
+      BeepOn();
       if (pilotSourceAddress < 0) return; // No EV-1 detected. Return!
       tN2kMsg N2kMsg;
       RaymarinePilot::SetEvoPilotMode(N2kMsg, pilotSourceAddress, PILOT_MODE_STANDBY);
-      NMEA2000.SendMsg(N2kMsg);
-      BeepOn();
+      NMEA2000.SendMsg(N2kMsg);     
     }
 
     else if (key == Key_Auto) {
       Serial.println("Setting PILOT_MODE_AUTO");
-
+      BeepOn();
       if (pilotSourceAddress < 0) return; // No EV-1 detected. Return!
       tN2kMsg N2kMsg;
       RaymarinePilot::SetEvoPilotMode(N2kMsg, pilotSourceAddress, PILOT_MODE_AUTO);
-      NMEA2000.SendMsg(N2kMsg);
-      BeepOn();
+      NMEA2000.SendMsg(N2kMsg);      
     }
 
     else if (key == Key_Plus_1) {
       Serial.println("+1");
-
+      BeepOn();
       if (pilotSourceAddress < 0) return; // No EV-1 detected. Return!
       tN2kMsg N2kMsg;
       RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_PLUS_1);
       NMEA2000.SendMsg(N2kMsg);
-      BeepOn();
     }
 
     else if (key == Key_Plus_10) {
       Serial.println("+10");
-
+      BeepOn();
       if (pilotSourceAddress < 0) return; // No EV-1 detected. Return!
       tN2kMsg N2kMsg;
       RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_PLUS_10);
-      NMEA2000.SendMsg(N2kMsg);
-      BeepOn();
+      NMEA2000.SendMsg(N2kMsg);      
     }
 
     else if (key == Key_Minus_1) {
       Serial.println("-1");
-
+      BeepOn();
       if (pilotSourceAddress < 0) return; // No EV-1 detected. Return!
       tN2kMsg N2kMsg;
       RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_MINUS_1);
-      NMEA2000.SendMsg(N2kMsg);
-      BeepOn();
+      NMEA2000.SendMsg(N2kMsg);      
     }
 
     else if (key == Key_Minus_10) {
       Serial.println("-10");
-
+      BeepOn();
       if (pilotSourceAddress < 0) return; // No EV-1 detected. Return!
       tN2kMsg N2kMsg;
       RaymarinePilot::KeyCommand(N2kMsg, pilotSourceAddress, KEY_MINUS_10);
-      NMEA2000.SendMsg(N2kMsg);
-      BeepOn();
+      NMEA2000.SendMsg(N2kMsg);      
     }
   }
   BeepOff();

@@ -109,7 +109,7 @@ void setup() {
   //NMEA2000.SetForwardOwnMessages();
 
   preferences.begin("nvs", false);                          // Open nonvolatile storage (nvs)
-  NodeAddress = preferences.getInt("LastNodeAddress", 32);  // Read stored last NodeAddress, default 32
+  NodeAddress = preferences.getInt("LastNodeAddress", 34);  // Read stored last NodeAddress, default 34
   preferences.end();
   Serial.printf("NodeAddress=%d\n", NodeAddress);
 

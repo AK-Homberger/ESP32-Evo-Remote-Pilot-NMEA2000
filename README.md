@@ -35,7 +35,7 @@ It is possible to integrate the Remote Control code also in other ESP32 NMEA2000
 
 
 # Updates
-- Version 0.5, 25.09.2020: 
+- Version 0.5, 25.09.2020: Changed BeepOn() in code to generate beep even if no EV-1 device is found (to alow testing). 
 
 - Version 0.4, 04.08.2020: Changed TX pin from 2 to 5. Addedd buzzer to pin 2. Store/restore last used NodeAddress.
 

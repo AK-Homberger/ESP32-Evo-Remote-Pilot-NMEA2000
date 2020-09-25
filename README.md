@@ -35,6 +35,8 @@ It is possible to integrate the Remote Control code also in other ESP32 NMEA2000
 
 
 # Updates
+- Version 0.5, 25.09.2020: 
+
 - Version 0.4, 04.08.2020: Changed TX pin from 2 to 5. Addedd buzzer to pin 2. Store/restore last used NodeAddress.
 
 - Version 0.2, 26.07.2020: Avoid using delay(), added SetN2kPGN65361 (Seatalk Alarm State) to allow alarm beep for key received feedback.

@@ -37,7 +37,7 @@ It is possible to integrate the Remote Control code also in other ESP32 NMEA2000
 
 
 - RXB6 433 Mhz receiver [Link](https://www.makershop.de/en/module/funk/rxb6-433mhz-antenne/)
-- ESP32 [Link](https://www.makershop.de/en/plattformen/arduino/pro-micro-mini-usb/) 
+- ESP32 [Link](https://www.amazon.de/AZDelivery-NodeMCU-Development-Nachfolgermodell-ESP8266/dp/B074RGW2VQ/ref=sxts_sxwds-bia-wc-drs3_0?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&cv_ct_cx=ESP32&dchild=1&keywords=ESP32&pd_rd_i=B074RGW2VQ&pd_rd_r=28b94661-bfc4-4d2b-8509-c6d44c3d5be8&pd_rd_w=43bCd&pd_rd_wg=OsSMh&pf_rd_p=578deb70-f9b7-4aa5-9f96-98765f2717c8&pf_rd_r=VA51BPS4ACAFXFQM9KBK&psc=1&qid=1601308880&sr=1-3-5a42e879-3844-4142-9c14-e77fe027c877) 
 - Buzzer  [Link](https://www.makershop.de/en/module/audio/aktiver-summer/)
 
 For programming:

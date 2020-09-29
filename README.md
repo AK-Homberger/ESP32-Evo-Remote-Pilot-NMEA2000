@@ -1,4 +1,4 @@
-# ESP32-Evo-Remote-Pilot-NMEA2000
+# ESP32 Evo Remote Pilot NMEA2000
 This is a Remote Control for an EV-1 Auto Pilot via NMEA2000 (SeaTalk-NG).
 
 It is based on the work of this project in GitHub: https://github.com/matztam/raymarine-evo-pilot-remote.

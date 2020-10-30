@@ -13,6 +13,8 @@ A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -
 
 ![Schematics](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotSchematics.png)
 
+![PCB](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotPCB.png)
+
 
 The code is using the NMEA 2000 libraries from Timo Lappalainen (https://github.com/ttlappalainen). 
 
@@ -54,6 +56,8 @@ Remote Control (KeyFob):  [Link](https://www.amazon.de/XCSOURCE-Elektrische-Univ
 
 
 # Updates
+- Version 0.5, 30.10.2020: Added KiCAD files and PCB. 
+
 - Version 0.5, 25.09.2020: Changed BeepOn() in code to generate beep even if no EV-1 device is found (to alow testing). 
 
 - Version 0.4, 04.08.2020: Changed TX pin from 2 to 5. Addedd buzzer to pin 2. Store/restore last used NodeAddress.

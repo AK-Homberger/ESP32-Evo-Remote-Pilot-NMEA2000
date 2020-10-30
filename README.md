@@ -9,7 +9,7 @@ Thats's all what is required to control an EV-1 based Auto Pilot with a simple 4
 
 A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -10 degrees) course changes to the autopilot (Auto/Standby is optional and requires two more buttons or an additional KeyFob). An accustical feedback for each received key is provided with a piezo buzzer tone. I tried to use the alarm function of the MFD (as within the Seatalk remote control). But so far I was not successful to send any alarm PGN that generates an alarm on the MFD.
 
-For questions/discussions regarding the project you can use the OpenBoatProjects area this Sailing Forum: https://www.segeln-forum.de/board194-boot-technik/board35-elektrik-und-elektronik/board195-open-boat-projects-org/77895-evo-autopilot-fernbedienung-mit-nmea2000/?s=b9460d50db9b29c916016f0e035fa62268823680
+For questions/discussions regarding the project you can use the OpenBoatProjects area this [Sailing Forum](https://www.segeln-forum.de/board194-boot-technik/board35-elektrik-und-elektronik/board195-open-boat-projects-org/77895-evo-autopilot-fernbedienung-mit-nmea2000/?s=b9460d50db9b29c916016f0e035fa62268823680). 
 
 It's a German Sailing Forum, but other languages (preferred English) are welcome.
 

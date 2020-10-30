@@ -12,6 +12,7 @@ A standard 4 button 433 MHz KeyFob is used to send (+1 / -1 degree) and (+10 / -
 ![KeyFob](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/KeyFob.jpg)
 
 The schmatics file and the pcb details are in the KiCAD folder.
+You can simply order a board from aisler.net: https://aisler.net/p/UUPXCXIH
 
 ![Schematics](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotSchematics.png)
 

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name mighty_esp32_38_pins-custom_library)(type Legacy)(uri C:/Users/Andreas/Documents/KiCad/libraries/esp32_devkit_38Pins-master/mighty_esp32_38_pins-custom_library.lib)(options "")(descr ""))
+)

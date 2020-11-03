@@ -38,12 +38,28 @@ The 12 Volt is reduced to 5 Volt with a DC Step Down Converter (D24V10F5, https:
 GPIO 15 is used for the data from the RXB6 receiver. As antenna please use a short wire (e.g. 17,3 cm).
 GPIO 2 is used to generate accustical feedback with a piezo buzzer.
 
+# Programming the 433 MHz KeyFob
+
 For programming the KeyFob please use the sketch ESP32_433_Programming.ino (https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/tree/master/ESP32_433_Programming). The Transmitter is connected to GPIO 19.
+
+You should change the four codes in the software to individual random numbers. The same codes have to be copied to the programing sketch. 
+
+Send each code individually and programm the keys of the remote according to the programming description of your KeyFob. Press "Send" button in serial console for next key. 
+
+Key 1 = button A = -1 degree
+
+Key 2 = button B =  +0 degree
+
+Key 3 = button C = -10 degrees
+
+Key 4 = button D = +10 degrees
+
+If you use Auto/Standby function you also have to program the two additional buttons accordingly. After programming you can check directly if codes are programmed correctly. Just press the key on the remote and check if the shown value is correct.
+
 
 It is possible to integrate the Remote Control code also in other ESP32 NMEA2000 projects (like the WiFi Gateway). But unfortunately the WLAN interfers with the 433 MHz receiver. Either RF part or interrupt for the RCSwitch). I noticed problems with the correct recognition of keys from the remote. As a result, I would suggest to avoid the integration in any other project with WLAN.
 
 # Parts:
-
 
 - Board (PCB) [Link](https://aisler.net/p/UUPXCXIH)
 - ESP32 [Link](https://www.amazon.de/AZDelivery-NodeMCU-Development-Nachfolgermodell-ESP8266/dp/B071P98VTG/ref=sxts_sxwds-bia-wc-drs3_0?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&cv_ct_cx=ESP32&dchild=1&keywords=ESP32) 

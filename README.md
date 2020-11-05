@@ -15,7 +15,7 @@ It's a German Sailing Forum, but other languages (preferred English) are welcome
 
 ![KeyFob](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/KeyFob.jpg)
 
-The schmatics file and the [pcb details](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotPCB.png) are in the KiCAD folder.
+The schmatics file and the [pcb details](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotRemote_pcb.pdf) are in the KiCAD folder.
 You can simply order a board from aisler.net: https://aisler.net/p/UUPXCXIH
 
 ![Schematics](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotSchematics.png)

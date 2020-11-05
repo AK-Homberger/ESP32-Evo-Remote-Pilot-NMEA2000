@@ -20,7 +20,7 @@ You can simply order a board from aisler.net: https://aisler.net/p/UUPXCXIH
 
 ![Schematics](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotSchematics.png)
 
-![PCB](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotPCB.png)
+![PCB](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotRemotePCB.png)
 
 
 The code is using the NMEA 2000 libraries from Timo Lappalainen (https://github.com/ttlappalainen). 

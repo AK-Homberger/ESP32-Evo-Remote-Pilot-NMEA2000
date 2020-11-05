@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name mighty_esp32_38_pins-custom_library)(type Legacy)(uri C:/Users/Andreas/Documents/KiCad/libraries/esp32_devkit_38Pins-master/mighty_esp32_38_pins-custom_library.lib)(options "")(descr ""))
+  (lib (name ESP32EvoPilotRemote-rescue)(type Legacy)(uri ${KIPRJMOD}/ESP32EvoPilotRemote-rescue.lib)(options "")(descr ""))
 )

@@ -6310,7 +6310,7 @@ U 1 1 5F2980D3
 P 10350 3850
 F 0 "Q1" H 10541 3896 50  0000 L CNN
 F 1 "BC547" H 10541 3805 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10550 3775 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 10550 3775 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 10350 3850 50  0001 L CNN
 	1    10350 3850
 	1    0    0    -1  
@@ -6330,12 +6330,12 @@ Wire Wire Line
 	10450 700  10450 3250
 Connection ~ 5800 4650
 $Comp
-L mighty_esp32_38_pins-custom_library:esp32_38_pins-custom_library U1
+L ESP32EvoPilotRemote-rescue:esp32_38_pins-custom_library-mighty_esp32_38_pins-custom_library U1
 U 1 1 5F9B108C
 P 7200 3050
 F 0 "U1" H 7550 3605 50  0000 C CNN
 F 1 "esp32_38_pins" H 7550 3514 50  0000 C CNN
-F 2 "" H 7550 3423 50  0000 C CNN
+F 2 "ESP32_Devkit_38Pins:ESP32_Devkit_38Pins" H 7550 3423 50  0000 C CNN
 F 3 "" H 7550 3424 50  0000 C CNN
 	1    7200 3050
 	1    0    0    -1  
@@ -6487,7 +6487,7 @@ U 1 1 5F9B39F2
 P 1150 1500
 F 0 "J3" H 1068 1717 50  0000 C CNN
 F 1 "Power" H 1068 1626 50  0000 C CNN
-F 2 "Connector_Wago:Wago_734-132_1x02_P3.50mm_Vertical" H 1150 1500 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1150 1500 50  0001 C CNN
 F 3 "~" H 1150 1500 50  0001 C CNN
 	1    1150 1500
 	-1   0    0    -1  

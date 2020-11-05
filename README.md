@@ -69,7 +69,7 @@ It is possible to integrate the Remote Control code also in other ESP32 NMEA2000
 - Buzzer [Link](https://www.reichelt.de/de/en/developer-boards-active-piezo-buzzer-module-debo-piezo-p239111.html?&nbc=1)
 - Resistor 3,3 KOhm [Link](https://www.reichelt.de/de/en/carbon-film-resistor-1-4-w-5-3-3-kohm-1-4w-3-3k-p1397.html?&nbc=1)
 - Transistor BC547 [Link](https://www.reichelt.de/bipolartransistor-npn-45v-0-1a-0-5w-to-92-bc-547b-dio-p219082.html?search=BC547)
-- Connector 2-pin [Link](https://www.reichelt.de/de/en/2-pin-terminal-strip-spacing-3-5-akl-059-02-p36598.html?&nbc=1)
+- Connector 2-pin [Link](https://www.reichelt.de/de/en/2-pin-terminal-strip-spacing-5-08-akl-101-02-p36605.html?&nbc=1)
 
 
 For programming:

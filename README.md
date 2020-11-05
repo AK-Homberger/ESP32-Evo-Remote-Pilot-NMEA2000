@@ -80,6 +80,8 @@ Remote Control (KeyFob):  [Link](https://www.amazon.de/XCSOURCE-Elektrische-Univ
 
 
 # Updates
+- Version 0.5, 05.11.2020: Changed PCB layout to Rev 1.1. Bigger terminal block (5.08 mm) and differnt transitor footprint for easy soldering.
+
 - Version 0.5, 30.10.2020: Added KiCAD files and PCB. 
 
 - Version 0.5, 25.09.2020: Changed BeepOn() in code to generate beep even if no EV-1 device is found (to alow testing). 

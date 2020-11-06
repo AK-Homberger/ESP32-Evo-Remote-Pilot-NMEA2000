@@ -80,7 +80,7 @@ Remote Control (KeyFob):  [Link](https://www.amazon.de/XCSOURCE-Elektrische-Univ
 
 
 # Updates
-- Version 0.5, 05.11.2020: Changed PCB layout to Rev 1.1. Bigger terminal block (5.08 mm) and differnt transitor footprint for easy soldering.
+- Version 0.5, 05.11.2020: Changed PCB layout to Rev 1.1. Bigger terminal block (5.08 mm) and different transitor footprint for easy soldering.
 
 - Version 0.5, 30.10.2020: Added KiCAD files and PCB. 
 

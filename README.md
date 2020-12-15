@@ -15,6 +15,9 @@ It's a German Sailing Forum, but other languages (preferred English) are welcome
 
 ![KeyFob](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/KeyFob.jpg)
 
+# !!! Caution !!! PCB layout wrong
+Please don't use the current PCB bacause there is an error with the ESP32 Layout. Ther orientation is wrong. The USB-Connection shouls be on the outside and not facing to the Buzzer.
+
 The schmatics file and the [pcb details](https://github.com/AK-Homberger/ESP32-Evo-Remote-Pilot-NMEA2000/blob/master/ESP32EvoPilotRemotePCB.pdf) are in the KiCAD folder.
 You can simply order a board from aisler.net: https://aisler.net/p/UUPXCXIH
 

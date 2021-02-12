@@ -30,7 +30,7 @@ Download and install the following libraries from GitHub link above:
  - NMEA2000
  - NMEA2000_esp32
  
-The Remote Control is using the RCswitch library (to be installed with the Arduiono IDE Library Manager).
+The Remote Control is using the RCswitch library (to be installed with the Arduino IDE Library Manager).
 
 For the ESP32 CAN bus, I use the "Waveshare SN65HVD230 Can Board" as transceiver. It works well with the ESP32 (GPIO pins 4 and 5). 
 The 12 Volt is reduced to 5 Volt with a DC Step Down Converter (D24V10F5, https://www.pololu.com/product/2831).

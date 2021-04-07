@@ -56,8 +56,18 @@ Key 4 = button D = +10 degrees
 
 If you use Auto/Standby function you also have to program the two additional buttons accordingly. After programming you can check directly if codes are programmed correctly. Just press the key on the remote and check if the shown value is correct.
 
-
 It is possible to integrate the Remote Control code also in other ESP32 NMEA2000 projects (like the WiFi Gateway). But unfortunately the WLAN interfers with the 433 MHz receiver. Either RF part or interrupt for the RCSwitch). I noticed problems with the correct recognition of keys from the remote. As a result, I would suggest to avoid the integration in any other project with WLAN.
+
+# Remove the 120 ohm resistor from the transceiver
+For unknown reasons, many CAN bus transceivers for the ESP32 have a 120 Ohm resistor built into them. The resistor does not belong to the devices at the ends of the stub lines, but to the ends of the backbone cable.
+
+Whether the transceiver contains a 120 ohm resistor can be determined either by looking at the circuit diagram or by measuring with the multimeter.
+
+A knife tip is suitable for removing the SMD resistor. Use it to scratch or pry off the resistance. With the transceiver shown here, place the tip of the knife in front of the resistor (between the chip and the resistor) and support the knife against the chip. Then lever the tip against the resistance and use it to scratch / loosen / break the resistance. Whichever happens first.
+
+![Transceiver](https://github.com/AK-Homberger/NMEA2000WifiGateway-with-ESP32/blob/master/CAN-Transceiver.jpg)
+
+It then looks like the picture. Then measure to be on the safe side. Without a 120 ohm resistor, the multimeter shows approx. 75 kOhm.
 
 # Parts:
 

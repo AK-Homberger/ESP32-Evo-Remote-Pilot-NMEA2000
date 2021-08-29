@@ -16,12 +16,13 @@
 //   - Reads 433 MHz commands via RXB6 receiver
 //   - Sends NMEA2000 messages to EV-1 Course Computer
 
-// Version 0.5, 25.09.2020, AK-Homberger
+// Version 0.6, 29.08.2021, AK-Homberger
 
 #define ESP32_CAN_TX_PIN GPIO_NUM_5  // Set CAN TX port to 5 
 #define ESP32_CAN_RX_PIN GPIO_NUM_4  // Set CAN RX port to 4
 
 #include <Arduino.h>
+#include <WiFi.h>
 #include <Preferences.h>
 #include <N2kMsg.h>
 #include <NMEA2000.h>
@@ -74,6 +75,9 @@ void setup() {
   uint8_t chipid[6];
   uint32_t id = 0;
   int i = 0;
+  
+  WiFi.mode(WIFI_OFF);
+  btStop();
 
   esp_efuse_read_mac(chipid);
   for (i = 0; i < 6; i++) id += (chipid[i] << (7 * i));

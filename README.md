@@ -91,7 +91,7 @@ Remote Control (KeyFob):  [Link](https://www.amazon.de/XCSOURCE-Elektrische-Univ
 
 # Updates
 - Version 0.7, 29.08.2021: Switch off WiFi and BT completely.
-- 
+
 - Version 0.6, 16.12.2020: Changed PCB layout to Rev 1.2. Corrected orientation of ESP32 (USB connector to outside).
 
 - Version 0.5, 05.11.2020: Changed PCB layout to Rev 1.1. Bigger terminal block (5.08 mm) and different transitor footprint for easy soldering.

@@ -16,7 +16,7 @@
 //   - Reads 433 MHz commands via RXB6 receiver
 //   - Sends NMEA2000 messages to EV-1 Course Computer
 
-// Version 0.6, 29.08.2021, AK-Homberger
+// Version 0.7, 29.08.2021, AK-Homberger
 
 #define ESP32_CAN_TX_PIN GPIO_NUM_5  // Set CAN TX port to 5 
 #define ESP32_CAN_RX_PIN GPIO_NUM_4  // Set CAN RX port to 4

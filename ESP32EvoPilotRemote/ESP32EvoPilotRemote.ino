@@ -79,7 +79,7 @@ void setup() {
   WiFi.mode(WIFI_OFF);
   btStop();
 
-  esp_efuse_read_mac(chipid);
+  esp_efuse_mac_get_default(chipid);
   for (i = 0; i < 6; i++) id += (chipid[i] << (7 * i));
 
   // Reserve enough buffer for sending all messages. This does not work on small memory devices like Uno or Mega
